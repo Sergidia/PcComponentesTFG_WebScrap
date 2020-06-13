@@ -177,7 +177,7 @@ def scraping(firebaseDB):
     
     
     for d in firebaseDB.collection('componentes').stream():
-        firebaseDB.collection('componentes').document(d.get('codigo')).update({'valida':False})
+        firebaseDB.collection('componentes').document(d.id).update({'valida':False})
 
     # Entramos en cada categoría de componentes (procesadores, gráficas, placas base...)
 
